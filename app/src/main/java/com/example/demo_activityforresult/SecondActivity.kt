@@ -14,7 +14,7 @@ class SecondActivity : AppCompatActivity() {
 
         val btn_submit = findViewById<Button>(R.id.btn_submit)
         val et_name = findViewById<EditText>(R.id.et_name)
-        val et_mail = findViewById<EditText>(R.id.et_name)
+        val et_mail = findViewById<EditText>(R.id.et_mail)
 
         btn_submit.setOnClickListener {
             val intent = Intent()
