@@ -3,6 +3,7 @@ package com.example.demo_activityforresult
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
             startActivityForResult(intent, SECOND_ACTIVITY_REQUEST_CODE)
         }
 
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -66,6 +68,31 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.e("life-cycle-1", "onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e("life-cycle-1", "onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.e("life-cycle-1", "onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.e("life-cycle-1", "onStop")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.e("life-cycle-1", "onRestart")
     }
 
 }
